@@ -2,7 +2,7 @@ import React from "react";
 import TextEditor from "./Components/texteditor";
 import Chat_section from "./Components/aiChatSection/Chat_section";
 import Header from "./Components/Header/header";
-import Related_files_cont from "./Components/Related_files_tab_files/Related_files_cont";
+import Related_files_cont from "./Components/relatedFilesSection/Related_files_cont";
 
 function button_handler(event) {
   var i =0,o=0;
