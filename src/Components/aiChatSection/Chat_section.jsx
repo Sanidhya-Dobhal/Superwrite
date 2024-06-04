@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Suggested_cont from './suggested_cont'
+import Suggested_cont from './chatBody'
 import User_inp_sec from './user_inp_sec'
 import Chat_header from './chat_header'
 export default function Chat_section() {
