@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/group_48095635.png";
+import logo from "../../assets/superbrainLogo.png";
 export default function Logo_title() {
   return (
     <div id="title_logo_div">

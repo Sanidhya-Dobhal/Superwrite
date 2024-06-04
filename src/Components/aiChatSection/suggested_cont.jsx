@@ -1,8 +1,8 @@
 import React from 'react';
 import { Typewriter, useTypewriter } from 'react-simple-typewriter';
 import { ReactTyped } from "react-typed";
-import usr_img from "../assets/Ellipse 1.png";
-import superBrain_logo from "../assets/group_48095635.png";
+import usr_img from "../../assets/Ellipse 1.png";
+import superBrain_logo from "../../assets/superbrainLogo.png";
 export default function Suggested_cont(props) {
   // var [TypeEffect] = useTypewriter({
   //   words: ['Server Response'],
