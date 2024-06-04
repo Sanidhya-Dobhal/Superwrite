@@ -6,6 +6,7 @@ export default function TextEditor() {
   const [value, setValue] = useState('');
   var modules = {
     toolbar: [
+        [{font:[]}],
         ['bold', 'italic', 'underline', 'strike'],
         [{ align: [] }],
         [{ list: 'ordered' }, { list: 'bullet' }],

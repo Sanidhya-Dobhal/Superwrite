@@ -30,10 +30,8 @@ function button_handler(event) {
 }
 
 function which_button_and_element_display(ele){
-  console.log("which button and element ",ele);
   if(ele === document.querySelector("#right_panel div:nth-child(2)"))//This means the chat button has been clicked
         {
-          console.log(ele.style.opacity ,"ye hai opacity");
           if(ele.style.opacity == 1)
           {
             document.getElementById("chat_outer_div").style.display ="none";

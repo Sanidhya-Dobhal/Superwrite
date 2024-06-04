@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/Vector (3).png';
+import img from '../../assets/Settings.png';
 export default function Button_5({button_handler}) {
   return (
     <div onClick = {button_handler} style = {{opacity: 1}}>
