@@ -9,7 +9,7 @@ function entercheck(e){
     {
       if(e.target.value !=='')
       {
-        useMessages([...messages,e.target.value]);
+        useMessages([...messages, e.target.value]);
         e.target.value ='';
       }
     }
