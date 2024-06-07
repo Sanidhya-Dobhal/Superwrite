@@ -1,5 +1,5 @@
 import img from '../../assets/Star_Icon.png';
-export default function Related_files_header() {
+export default function RelatedFilesHeader(): JSX.Element {
   return (
     <div id="Related_files_tab_heading">
       <div style={{ display: 'flex', alignItems: 'center' }}>

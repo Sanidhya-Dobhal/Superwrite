@@ -1,6 +1,6 @@
 import img from '../../assets/Rectangle 634.png';
 import img2 from '../../assets/youtube.png';
-export default function Related_files_body() {
+export default function RelatedFilesBody(): JSX.Element {
   let arr = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <div style={{ height: 'calc(100vh - 110px)', overflowY: 'scroll' }}>
