@@ -5,27 +5,12 @@ import Related_files_cont from './components/relatedFilesSection/RelatedFilesCom
 
 type ButtonHandler = (event: React.MouseEvent<HTMLDivElement>) => void;
 const button_handler: ButtonHandler = (event: React.MouseEvent<HTMLDivElement>) => {
-  var i = 0,
-    o = 0;
-  for (i = 0; i < 5; i++) {
-    if (document.getElementsByClassName('right_panel_logos')[i] === event.target) {
-      if ((document.querySelectorAll('#right_panel div')[i] as HTMLElement).style.opacity == '1') {
-        (document.querySelectorAll('#right_panel div')[i] as HTMLElement).style.opacity = '0.5';
-      } else {
-        (document.querySelectorAll('#right_panel div')[i] as HTMLElement).style.opacity = '1';
-      }
-      o = 1;
-      which_button_and_element_display(document.querySelectorAll('#right_panel div')[i] as HTMLElement);
-    }
+  if ((event.currentTarget as HTMLElement).style.opacity == '0.5') {
+    (event.currentTarget as HTMLElement).style.opacity = '1';
+  } else {
+    (event.currentTarget as HTMLElement).style.opacity = '0.5';
   }
-  if (o === 0) {
-    if ((event.target as HTMLElement).style.opacity == '0.5') {
-      (event.target as HTMLElement).style.opacity = '1';
-    } else {
-      (event.target as HTMLElement).style.opacity = '0.5';
-    }
-    which_button_and_element_display(event.target as HTMLElement);
-  }
+  which_button_and_element_display(event.currentTarget as HTMLElement);
 };
 
 function which_button_and_element_display(ele: HTMLElement) {
