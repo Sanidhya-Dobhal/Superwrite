@@ -1,7 +1,7 @@
 import { ReactTyped } from 'react-typed';
 import usr_img from '../../assets/Ellipse 1.png';
 import superBrain_logo from '../../assets/superbrainLogo.png';
-export default function Suggested_cont({ messages }: { messages: string[] }): JSX.Element {
+export default function chatBody({ messages }: { messages: string[] }): JSX.Element {
   return (
     <div id="Suggested_cont">
       <div>

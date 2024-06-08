@@ -1,5 +1,5 @@
 import Text_editor_icon from '../../assets/SBrowser.png';
-export default function Button_1({
+export default function sBrowserButton({
   buttonActiveArr,
   usebuttonActiveArr,
 }: {

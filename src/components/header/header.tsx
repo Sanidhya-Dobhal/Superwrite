@@ -1,6 +1,6 @@
-import Doc_title from './doc_title';
-import Right_panel from './right_panel.tsx';
-import Logo_title from './logo_title';
+import DocTitle from './docTitle.tsx';
+import RightPanel from './rightPanel.tsx';
+import LogoTitle from './logoTitle.tsx';
 export default function Header({
   buttonActiveArr,
   usebuttonActiveArr,
@@ -11,10 +11,10 @@ export default function Header({
   return (
     <header>
       <div>
-        <Logo_title />
+        <LogoTitle />
       </div>
-      <Doc_title />
-      <Right_panel buttonActiveArr={buttonActiveArr} usebuttonActiveArr={usebuttonActiveArr} />
+      <DocTitle />
+      <RightPanel buttonActiveArr={buttonActiveArr} usebuttonActiveArr={usebuttonActiveArr} />
     </header>
   );
 }

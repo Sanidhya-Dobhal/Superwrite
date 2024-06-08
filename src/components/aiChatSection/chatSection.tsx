@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Chat_body from './chatBody';
-import User_inp_sec from './user_inp_sec';
-import Chat_header from './chat_header';
-export default function Chat_section({ buttonActiveArr }: { buttonActiveArr: boolean[] }): JSX.Element {
+import ChatBody from './chatBody';
+import UserInpSec from './userInpSec';
+import ChatHeader from './chatHeader';
+export default function ChatSection({ buttonActiveArr }: { buttonActiveArr: boolean[] }): JSX.Element {
   const [messages, useMessages] = useState<string[]>([]);
   function entercheck(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key == 'Enter') {
@@ -14,9 +14,9 @@ export default function Chat_section({ buttonActiveArr }: { buttonActiveArr: boo
   }
   return (
     <div id="chat_outer_div" style={{ display: buttonActiveArr[1] ? 'none' : 'block' }}>
-      <Chat_header />
-      <Chat_body messages={messages} />
-      <User_inp_sec entercheck={entercheck} />
+      <ChatHeader />
+      <ChatBody messages={messages} />
+      <UserInpSec entercheck={entercheck} />
     </div>
   );
 }

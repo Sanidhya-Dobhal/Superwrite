@@ -1,7 +1,7 @@
-import TextEditor from './components/texteditor';
-import Chat_section from './components/aiChatSection/Chat_section';
+import TextEditor from './components/textEditor';
+import ChatSection from './components/aiChatSection/chatSection';
 import Header from './components/header/header';
-import Related_files_cont from './components/relatedFilesSection/RelatedFilesComp';
+import RelatedFilesComp from './components/relatedFilesSection/relatedFilesCom';
 import { useState } from 'react';
 function App() {
   const [buttonActiveArr, usebuttonActiveArr] = useState([true, false, false, false, true]);
@@ -12,9 +12,9 @@ function App() {
         usebuttonActiveArr={usebuttonActiveArr as (newState: boolean[]) => void}
       />
       <div id="flex_box_div">
-        <Chat_section buttonActiveArr={buttonActiveArr} />
+        <ChatSection buttonActiveArr={buttonActiveArr} />
         <TextEditor />
-        <Related_files_cont buttonActiveArr={buttonActiveArr} />
+        <RelatedFilesComp buttonActiveArr={buttonActiveArr} />
       </div>
     </>
   );

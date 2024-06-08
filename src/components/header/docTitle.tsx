@@ -1,4 +1,4 @@
-export default function Doc_title() {
+export default function DocTitle() {
   return (
     <input
       type="text"

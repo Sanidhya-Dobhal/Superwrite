@@ -1,5 +1,5 @@
 import logo from '../../assets/superbrainLogo.png';
-export default function Logo_title() {
+export default function LogoTitle() {
   return (
     <div id="title_logo_div">
       <span id="back_but">&lt; </span>
