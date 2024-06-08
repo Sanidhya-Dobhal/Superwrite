@@ -1,9 +1,20 @@
 import Text_editor_icon from '../../assets/SBrowser.png';
-
-type ButtonHandler = (event: React.MouseEvent<HTMLDivElement>) => void;
-export default function Button_1({ button_handler }: { button_handler: ButtonHandler }) {
+export default function Button_1({
+  buttonActiveArr,
+  usebuttonActiveArr,
+}: {
+  buttonActiveArr: boolean[];
+  usebuttonActiveArr: (newState: boolean[]) => void;
+}) {
   return (
-    <div onClick={button_handler} style={{ opacity: 1 }}>
+    <div
+      onClick={() => {
+        let newButtonActiveArr = [...buttonActiveArr];
+        newButtonActiveArr[0] = !newButtonActiveArr[0];
+        usebuttonActiveArr(newButtonActiveArr);
+      }}
+      style={{ opacity: buttonActiveArr[0] ? 1 : 0.5 }}
+    >
       <img src={Text_editor_icon} className="right_panel_logos" />
     </div>
   );

@@ -1,4 +1,4 @@
-export default function DocTitle(): JSX.Element {
+export default function Doc_title() {
   return (
     <input
       type="text"

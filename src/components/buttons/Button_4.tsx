@@ -1,8 +1,20 @@
 import img from '../../assets/Star_Icon.png';
-type ButtonHandler = (event: React.MouseEvent<HTMLDivElement>) => void;
-export default function Button_4({ button_handler }: { button_handler: ButtonHandler }) {
+export default function Button_4({
+  buttonActiveArr,
+  usebuttonActiveArr,
+}: {
+  buttonActiveArr: boolean[];
+  usebuttonActiveArr: (newState: boolean[]) => void;
+}) {
   return (
-    <div onClick={button_handler} style={{ opacity: 0.5 }}>
+    <div
+      onClick={() => {
+        let newButtonActiveArr = [...buttonActiveArr];
+        newButtonActiveArr[3] = !newButtonActiveArr[3];
+        usebuttonActiveArr(newButtonActiveArr);
+      }}
+      style={{ opacity: buttonActiveArr[3] ? 1 : 0.5 }}
+    >
       <img src={img} className="right_panel_logos" />
     </div>
   );

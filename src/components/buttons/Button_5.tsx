@@ -1,8 +1,20 @@
 import img from '../../assets/Settings.png';
-type ButtonHandler = (event: React.MouseEvent<HTMLDivElement>) => void;
-export default function Button_5({ button_handler }: { button_handler: ButtonHandler }) {
+export default function Button_5({
+  buttonActiveArr,
+  usebuttonActiveArr,
+}: {
+  buttonActiveArr: boolean[];
+  usebuttonActiveArr: (newState: boolean[]) => void;
+}) {
   return (
-    <div onClick={button_handler} style={{ opacity: 1 }}>
+    <div
+      onClick={() => {
+        let newButtonActiveArr = [...buttonActiveArr];
+        newButtonActiveArr[4] = !newButtonActiveArr[4];
+        usebuttonActiveArr(newButtonActiveArr);
+      }}
+      style={{ opacity: buttonActiveArr[4] ? 1 : 0.5 }}
+    >
       <img src={img} className="right_panel_logos" />
     </div>
   );
