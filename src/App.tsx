@@ -1,7 +1,7 @@
 import TextEditor from './components/texteditor';
 import Chat_section from './components/aiChatSection/Chat_section';
 import Header from './components/header/header';
-import Related_files_cont from './components/relatedFilesSection/relatedFilesComp';
+import Related_files_cont from './components/relatedFilesSection/RelatedFilesComp';
 import { useState } from 'react';
 function App() {
   const [buttonActiveArr, usebuttonActiveArr] = useState([true, false, false, false, true]);
