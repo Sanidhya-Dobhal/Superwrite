@@ -1,21 +1,21 @@
 import img from '../../assets/Settings.png';
-export default function Button_5({
+export default function SettingsButton({
   buttonActiveArr,
-  usebuttonActiveArr,
+  setbuttonActiveArr,
 }: {
   buttonActiveArr: boolean[];
-  usebuttonActiveArr: (newState: boolean[]) => void;
+  setbuttonActiveArr: (newState: boolean[]) => void;
 }) {
   return (
     <div
       onClick={() => {
         let newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[4] = !newButtonActiveArr[4];
-        usebuttonActiveArr(newButtonActiveArr);
+        setbuttonActiveArr(newButtonActiveArr);
       }}
       style={{ opacity: buttonActiveArr[4] ? 1 : 0.5 }}
     >
-      <img src={img} className="right_panel_logos" />
+      <img src={img} className="right-panel-buttons" />
     </div>
   );
 }

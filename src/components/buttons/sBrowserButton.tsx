@@ -1,21 +1,21 @@
-import Text_editor_icon from '../../assets/SBrowser.png';
-export default function sBrowserButton({
+import img from '../../assets/SBrowser.png';
+export default function SBrowserButton({
   buttonActiveArr,
-  usebuttonActiveArr,
+  setbuttonActiveArr,
 }: {
   buttonActiveArr: boolean[];
-  usebuttonActiveArr: (newState: boolean[]) => void;
+  setbuttonActiveArr: (newState: boolean[]) => void;
 }) {
   return (
     <div
       onClick={() => {
         let newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[0] = !newButtonActiveArr[0];
-        usebuttonActiveArr(newButtonActiveArr);
+        setbuttonActiveArr(newButtonActiveArr);
       }}
       style={{ opacity: buttonActiveArr[0] ? 1 : 0.5 }}
     >
-      <img src={Text_editor_icon} className="right_panel_logos" />
+      <img src={img} className="right-panel-buttons" />
     </div>
   );
 }

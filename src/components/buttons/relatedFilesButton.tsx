@@ -1,21 +1,21 @@
-import img from '../../assets/Star_Icon.png';
-export default function Button_4({
+import img from '../../assets/starIcon.png';
+export default function RelatedFilesButton({
   buttonActiveArr,
-  usebuttonActiveArr,
+  setbuttonActiveArr,
 }: {
   buttonActiveArr: boolean[];
-  usebuttonActiveArr: (newState: boolean[]) => void;
+  setbuttonActiveArr: (newState: boolean[]) => void;
 }) {
   return (
     <div
       onClick={() => {
         let newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[3] = !newButtonActiveArr[3];
-        usebuttonActiveArr(newButtonActiveArr);
+        setbuttonActiveArr(newButtonActiveArr);
       }}
       style={{ opacity: buttonActiveArr[3] ? 1 : 0.5 }}
     >
-      <img src={img} className="right_panel_logos" />
+      <img src={img} className="right-panel-buttons" />
     </div>
   );
 }

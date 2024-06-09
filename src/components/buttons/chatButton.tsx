@@ -1,21 +1,21 @@
-import chat_logo from '../../assets/chatbubbles-outline.png';
-export default function Button_2({
+import img from '../../assets/chatBubblesIcon.png';
+export default function ChatButton({
   buttonActiveArr,
-  usebuttonActiveArr,
+  setbuttonActiveArr,
 }: {
   buttonActiveArr: boolean[];
-  usebuttonActiveArr: (newState: boolean[]) => void;
+  setbuttonActiveArr: (newState: boolean[]) => void;
 }) {
   return (
     <div
       onClick={() => {
         let newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[1] = !newButtonActiveArr[1];
-        usebuttonActiveArr(newButtonActiveArr);
+        setbuttonActiveArr(newButtonActiveArr);
       }}
       style={{ opacity: buttonActiveArr[1] ? 1 : 0.5 }}
     >
-      <img src={chat_logo} className="right_panel_logos" />
+      <img src={img} className="right-panel-buttons" />
     </div>
   );
 }

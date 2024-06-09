@@ -1,13 +1,13 @@
-import img from '../../assets/Rectangle 634.png';
+import img from '../../assets/thumbnail.png';
 import img2 from '../../assets/youtube.png';
 export default function RelatedFilesBody(): JSX.Element {
   let arr = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
-    <div style={{ height: 'calc(100vh - 110px)', overflowY: 'scroll' }}>
+    <div id="related-files-section-body">
       <>
         {arr.map((ele) => (
-          <div key={ele} className="related_file_elements">
-            <img src={img} style={{ width: '5vw', height: 'auto' }} />
+          <div key={ele} className="related-file-elements">
+            <img src={img} style={{ width: '5vw' }} />
             <div>
               <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <img src={img2} className="youtube" />

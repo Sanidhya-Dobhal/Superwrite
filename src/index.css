@@ -1,13 +1,14 @@
 :root {
   --header-height: 50px;
+  --related-files-section-header-height: 110px;
 }
 @font-face {
   font-family: 'ClashDisplayBold';
-  src: url('./ClashDisplayBold.otf') format('opentype');
+  src: url('./fonts/ClashDisplayBold.otf') format('opentype');
 }
 @font-face {
   font-family: 'SF-Pro-Text-Light';
-  src: url('./SF-Pro-Text-Light.otf') format('opentype');
+  src: url('./fonts/SF-Pro-Text-Light.otf') format('opentype');
 }
 header {
   height: 50px;
@@ -17,7 +18,7 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid rgba(225, 225, 225, 0.5);
 }
-#flex_box_div {
+#main-flex-box-div {
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -30,10 +31,7 @@ body {
 .ql-editor {
   min-height: calc(100vh - 155px) !important;
 }
-#chat_outer_div {
-  height: calc(100vh -50px);
-}
-#user_inp_sec {
+#user-input-section {
   background-color: white;
   height: 9vh;
   z-index: 2;
@@ -42,7 +40,7 @@ body {
   display: flex;
   flex-direction: row;
 }
-#user_inp_sec input[type='text'] {
+#user-input-section input[type='text'] {
   height: 40px;
   margin: auto;
   margin-top: 16px;
@@ -53,7 +51,7 @@ body {
   border: none;
   padding: 0px 16px;
 }
-#user_inp_sec button {
+#user-input-section button {
   height: 48px;
   width: 48px;
   border-radius: 48px;
@@ -71,7 +69,10 @@ body {
   margin: auto 10px;
   background-color: white;
 }
-#Suggested_cont {
+#chat-outer-div {
+  height: calc(100vh -50px);
+}
+#chat-body {
   height: calc(91vh - var(--header-height) - 40px);
   background-color: #ffffff;
   width: calc(30vw - 8px);
@@ -86,18 +87,18 @@ body {
   font-family: 'ClashDisplayBold';
   margin-left: 5px;
 }
-#back_but {
+#back-but {
   font-family: 'SF-Pro-Text-Light' !important;
   font-weight: 590;
   margin-right: 7.5px;
   margin-left: 2.25vw;
 }
-#title_logo_div {
+#title-logo-div {
   display: flex;
   flex-direction: row;
   padding-top: 11px;
 }
-#title_text {
+#title-text {
   height: 25px;
   margin-top: 10px;
   width: 30vw;
@@ -106,12 +107,12 @@ body {
   background-color: rgba(225, 225, 225, 0.5);
   border: 0px;
 }
-#right_panel {
+#right-panel {
   display: flex;
   width: 200px;
   padding-top: 7px;
 }
-#right_panel div {
+#right-panel div {
   display: flex;
   background-color: rgba(225, 225, 225, 0.5);
   width: 28px;
@@ -120,10 +121,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-#right_panel div:nth-child(5) {
+#right-panel div:nth-child(5) {
   margin-left: 30px;
 }
-#chat_header {
+#chat-header {
   display: flex;
   height: 40px;
   font-size: 16px;
@@ -133,7 +134,7 @@ body {
   border-bottom: 0.7px solid rgba(225, 225, 225, 0.5);
   align-items: center;
 }
-.usr_messages {
+.user-messages {
   margin-left: 60%;
   text-align: center;
   display: flex;
@@ -144,7 +145,7 @@ body {
   padding: 9.23px 12.31px;
   margin-bottom: 18px;
 }
-.superwrite_messages_div {
+.superwriteAI-messages-div {
   border-radius: 8px;
   width: 83%;
   margin: auto;
@@ -158,33 +159,42 @@ body {
   height: 17px;
 }
 
-.right_panel_logos {
+.right-panel-buttons {
   width: 17px;
   height: 17px;
 }
-#Related_files_tab {
+#related-files-section {
   width: 50%;
   background-color: white;
   max-width: 20vw;
 }
-#Stars_icon {
+#related-stars-icon {
   width: 15px;
   height: auto;
   margin-right: 10px;
   display: block;
 }
-#Related_files_tab_heading {
+#related-files-section-heading {
   display: flex;
   flex-direction: row;
+}
+#related-files-section-body {
+  height: calc(100vh - var(--related-files-section-header-height));
+  overflow-y: scroll;
+}
+.related-file-elements {
+  display: flex;
+  flex-direction: row;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 .youtube {
   height: 16px;
   margin-left: 8px;
 }
-.related_file_elements {
+#logo-and-button {
   display: flex;
-  background-color: #f8f8f8;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 16px;
+  flex-direction: row;
 }

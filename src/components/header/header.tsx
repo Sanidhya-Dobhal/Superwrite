@@ -1,20 +1,18 @@
 import DocTitle from './docTitle.tsx';
-import RightPanel from './rightPanel.tsx';
-import LogoTitle from './logoTitle.tsx';
+import RightPanel from './rightHeaderPanel.tsx';
+import LogoAndTitle from './logoAndTitle.tsx';
 export default function Header({
   buttonActiveArr,
-  usebuttonActiveArr,
+  setbuttonActiveArr,
 }: {
   buttonActiveArr: boolean[];
-  usebuttonActiveArr: (newState: boolean[]) => void;
+  setbuttonActiveArr: (newState: boolean[]) => void;
 }) {
   return (
     <header>
-      <div>
-        <LogoTitle />
-      </div>
+      <LogoAndTitle />
       <DocTitle />
-      <RightPanel buttonActiveArr={buttonActiveArr} usebuttonActiveArr={usebuttonActiveArr} />
+      <RightPanel buttonActiveArr={buttonActiveArr} setbuttonActiveArr={setbuttonActiveArr} />
     </header>
   );
 }

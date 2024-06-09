@@ -4,18 +4,18 @@ import Header from './components/header/header';
 import RelatedFilesComp from './components/relatedFilesSection/relatedFilesComp';
 import { useState } from 'react';
 function App() {
-  const [buttonActiveArr, usebuttonActiveArr] = useState([true, false, false, false, true]);
+  const [buttonActiveArr, setbuttonActiveArr] = useState([true, false, false, false, true]);
   return (
     <>
       <Header
         buttonActiveArr={buttonActiveArr as boolean[]}
-        usebuttonActiveArr={usebuttonActiveArr as (newState: boolean[]) => void}
+        setbuttonActiveArr={setbuttonActiveArr as (newState: boolean[]) => void}
       />
-      <div id="flex_box_div">
+      <main id="main-flex-box-div">
         <ChatSection buttonActiveArr={buttonActiveArr} />
         <TextEditor />
         <RelatedFilesComp buttonActiveArr={buttonActiveArr} />
-      </div>
+      </main>
     </>
   );
 }

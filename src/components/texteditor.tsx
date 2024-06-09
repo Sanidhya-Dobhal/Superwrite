@@ -21,5 +21,5 @@ export default function TextEditor(): JSX.Element {
       matchVisual: false,
     },
   };
-  return <ReactQuill theme="snow" value={value} onChange={setValue} modules={modules} />;
+  return <ReactQuill value={value} onChange={setValue} modules={modules} />;
 }

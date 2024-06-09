@@ -1,9 +1,9 @@
-import img from '../../assets/Star_Icon.png';
+import img from '../../assets/starIcon.png';
 export default function RelatedFilesHeader(): JSX.Element {
   return (
-    <div id="Related_files_tab_heading">
+    <div id="related-files-section-heading">
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <img src={img} id="Stars_icon" />
+        <img src={img} id="related-stars-icon" />
       </div>
       <h3>Related Files (Found by AI)</h3>
     </div>
