@@ -1,4 +1,4 @@
-import TextEditor from './components/textEditor';
+import TextEditor from './components/texteitor';
 import ChatSection from './components/aiChatSection/chatSection';
 import Header from './components/header/header';
 import RelatedFilesComp from './components/relatedFilesSection/relatedFilesComp';
