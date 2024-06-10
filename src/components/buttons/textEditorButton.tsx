@@ -9,7 +9,7 @@ export default function TextEditorButton({
   return (
     <div
       onClick={() => {
-        let newButtonActiveArr = [...buttonActiveArr];
+        const newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[2] = !newButtonActiveArr[2];
         setbuttonActiveArr(newButtonActiveArr);
       }}

@@ -1,7 +1,7 @@
 import img from '../../assets/thumbnail.png';
 import img2 from '../../assets/youtube.png';
 export default function RelatedFilesBody(): JSX.Element {
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <div id="related-files-section-body">
       <>

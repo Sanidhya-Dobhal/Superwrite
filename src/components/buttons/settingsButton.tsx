@@ -9,7 +9,7 @@ export default function SettingsButton({
   return (
     <div
       onClick={() => {
-        let newButtonActiveArr = [...buttonActiveArr];
+        const newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[4] = !newButtonActiveArr[4];
         setbuttonActiveArr(newButtonActiveArr);
       }}

@@ -9,7 +9,7 @@ export default function SBrowserButton({
   return (
     <div
       onClick={() => {
-        let newButtonActiveArr = [...buttonActiveArr];
+        const newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[0] = !newButtonActiveArr[0];
         setbuttonActiveArr(newButtonActiveArr);
       }}

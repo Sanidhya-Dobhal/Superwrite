@@ -9,7 +9,7 @@ export default function RelatedFilesButton({
   return (
     <div
       onClick={() => {
-        let newButtonActiveArr = [...buttonActiveArr];
+        const newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[3] = !newButtonActiveArr[3];
         setbuttonActiveArr(newButtonActiveArr);
       }}

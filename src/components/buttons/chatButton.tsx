@@ -9,7 +9,7 @@ export default function ChatButton({
   return (
     <div
       onClick={() => {
-        let newButtonActiveArr = [...buttonActiveArr];
+        const newButtonActiveArr = [...buttonActiveArr];
         newButtonActiveArr[1] = !newButtonActiveArr[1];
         setbuttonActiveArr(newButtonActiveArr);
       }}
